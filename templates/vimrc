@@ -84,7 +84,7 @@ noremap : ;
 noremap /  /\v
 nnoremap n nzz
 nnoremap N Nzz
-nnoremap <Esc><Esc> :noh<CR>
+nnoremap <silent> <C-L> :noh<C-L><CR>
 
 set pastetoggle=<F10>
 
