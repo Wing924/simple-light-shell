@@ -1,7 +1,7 @@
 set -e
 
 if [ ! -n "$ZSH" ]; then
-  ZSH=~/.oh-my-zsh
+  ZSH=~/.simple-light-shell
 fi
 
 if [ -d "$ZSH" ]; then
@@ -23,6 +23,7 @@ fi
 
 echo "\033[0;34mUsing the Oh My Zsh template file and adding it to ~/.zshrc\033[0m"
 cp $ZSH/templates/zshrc.zsh-template ~/.zshrc
+cp $ZSH/templates/vimrc ~/.vimrc
 sed -i -e "/^ZSH=/ c\\
 ZSH=$ZSH
 " ~/.zshrc

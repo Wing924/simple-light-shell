@@ -18,11 +18,11 @@ You can install this via the command-line with either @curl@ or @wget@.
 
 h4. via @curl@:
 
-@curl -L http://install.ohmyz.sh | sh@
+@sh -c "$(curl -fsSL https://raw.githubusercontent.com/Wing924/simple-light-shell/master/tools/install.sh)"@
 
 h4. via @wget@:
 
-@wget --no-check-certificate http://install.ohmyz.sh -O - | sh@
+@sh -c "$(wget https://raw.githubusercontent.com/Wing924/simple-light-shell/master/tools/install.sh -O -)"@
 
 h4. *Optionally*, change the install directory:
 
@@ -30,7 +30,7 @@ The default location is @~/.oh-my-zsh@ (hidden in your home directory).
 
 You can change the install directory with the @ZSH@ environment variable, either by running @export ZSH=/your/path@ before installing, or by setting it before the end of the install pipeline like this:
 
-@curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | ZSH=~/.dotfiles/zsh sh@
+@curl -L https://raw.githubusercontent.com/Wing924/simple-light-shell/master/tools/install.sh | ZSH=~/.dotfiles/zsh sh@
 
 h3. The manual way
 

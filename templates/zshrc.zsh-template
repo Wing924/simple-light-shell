@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/usr/local/simple-light-shell
+export ZSH=$HOME/.simple-light-shell
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -14,7 +14,7 @@ ZSH_THEME="crcandy"
 DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# export UPDATE_ZSH_DAYS=99999
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -53,6 +53,16 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+
+export LANG=en_US.UTF-8
+
+
+if [[ -x `which vim` ]]; then
+    alias vi=vim
+    export EDITOR=vim
+elif [[ -x `which vi` ]]; then
+    export EDITOR=vi
+fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
