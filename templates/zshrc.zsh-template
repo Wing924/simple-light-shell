@@ -56,11 +56,14 @@ source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
 
-
-if [[ -x `which vim` ]]; then
+check_exists() {
+    command -v $1 >/dev/null
+    return $?
+}
+if check_exists vim ; then
     alias vi=vim
     export EDITOR=vim
-elif [[ -x `which vi` ]]; then
+elif check_exists vi; then
     export EDITOR=vi
 fi
 
